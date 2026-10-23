@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration</title>
+</head>
+<body>
+
+    <h1>Employee Registration Form</h1>
+
+    <form action="process.php" method="POST"
+          enctype="multipart/form-data">
+
+        <label>Employee Full Name:</label><br>
+        <input type="text" name="employee_name" required>
+        <br><br>
+
+        <label>Employee ID:</label><br>
+        <input type="text" name="employee_id" required>
+        <br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        <label>Department:</label><br>
+        <select name="department" required>
+            <option value="">Select Department</option>
+            <option value="Human Resources">Human Resources</option>
+            <option value="Finance">Finance</option>
+            <option value="Information Technology">
+                Information Technology
+            </option>
+            <option value="Administration">Administration</option>
+        </select>
+        <br><br>
+
+        <label>Employment Type:</label><br>
+        <input type="radio" name="employment_type"
+               value="Full-Time" required> Full-Time
+
+        <input type="radio" name="employment_type"
+               value="Part-Time"> Part-Time
+        <br><br>
+
+        <label>Basic Salary:</label><br>
+        <input type="number" name="basic_salary"
+               min="0.01" step="0.01" required>
+        <br><br>
+
+        <label>Allowance:</label><br>
+        <input type="number" name="allowance"
+               min="0" step="0.01" value="0" required>
+        <br><br>
+
+        <label>Deduction:</label><br>
+        <input type="number" name="deduction"
+               min="0" step="0.01" value="0" required>
+        <br><br>
+
+        <label>Years of Service:</label><br>
+        <input type="number" name="years_service"
+               min="0" step="1" value="0" required>
+        <br><br>
+
+        <label>Employee Document:</label><br>
+        <input type="file" name="employee_document" required>
+        <br><br>
+
+        <button type="submit">Register Employee</button>
+
+    </form>
+
+</body>
+</html>
